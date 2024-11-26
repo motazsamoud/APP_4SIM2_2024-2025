@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ratingActivite.AddRatingActivite">
+
+    <!-- QR Code Display -->
+    <ImageView
+        android:id="@+id/ivQrCode"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="QR Code" />
+
+    <!-- RatingBar for rating -->
+    <RatingBar
+        android:id="@+id/rbRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivQrCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <!-- Comment section -->
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rbRatingBar"
+        android:layout_marginTop="16dp"
+        android:hint="Comment"
+        android:padding="16dp"
+        android:inputType="textMultiLine"
+        android:minLines="3" /> <!-- Minimum lines for better visibility -->
+
+    <Button
+        android:id="@+id/ratingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment"
+        android:layout_marginTop="16dp"
+        android:text="Add Rating"
+        android:textStyle="bold" />
+
+</RelativeLayout>

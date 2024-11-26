@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343434"
+    tools:context=".view.activiteList.ActiviteRecyclageList">
+
+    <!-- Image de fond en haut -->
+    <ImageView
+        android:id="@+id/topBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/top_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView pour afficher les activités -->
+
+    <!-- Bouton Commandes Vocales -->
+
+    <!-- Bouton Export PDF -->
+
+    <!-- Bouton Ajouter une activité -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activiteRecyclageRecycleview"
+        android:layout_width="389dp"
+        android:layout_height="343dp"
+        android:layout_margin="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <Button
+        android:id="@+id/voiceCommand"
+        android:layout_width="397dp"
+        android:layout_height="37dp"
+        android:layout_margin="16dp"
+        android:background="#FF5722"
+        android:text="Commandes Vocales"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/exportPDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/exportPDF"
+        android:layout_width="401dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="#E48F1B"
+        android:text="Export PDF"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addActivite"
+        android:layout_width="410dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="#4CAF50"
+        android:text="Add Activity"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Bouton Mes Activités -->
+    <Button
+        android:id="@+id/Myactivities"
+        android:layout_width="400dp"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:background="#2196F3"
+        android:text="My Activities"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/addActivite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Bouton Statistiques -->
+    <Button
+        android:id="@+id/stats"
+        android:layout_width="411dp"
+        android:layout_height="33dp"
+        android:layout_margin="16dp"
+        android:background="#673AB7"
+        android:text="Stats"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Myactivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- WebView pour afficher le PDF -->
+
+    <Button
+        android:id="@+id/chatbotButton"
+        android:layout_width="402dp"
+        android:layout_height="47dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_style"
+        android:drawablePadding="16dp"
+        android:padding="8dp"
+        android:text="Ouvrir le Chatbot"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activiteRecyclageRecycleview" />
+
+    <WebView
+        android:id="@+id/pdfWebView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/activiteRecyclageRecycleview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Texte informatif -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Need to update your password? Change it here."
+        android:textAlignment="center"
+        android:textColor="#E1A500"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/voiceCommand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

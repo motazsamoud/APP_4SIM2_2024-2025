@@ -1,0 +1,11 @@
+{
+  "Cognito": {
+    "IdentityPoolId": "eu-west-3:669f9777-d15b-45d4-9177-4629d37df68b",
+    "Region": "eu-west-3"
+  },
+  "Lex": {
+    "Region": "eu-west-1",
+    "BotName": "motaz",
+    "BotAlias": "TestBotAlias"
+  }
+}
